@@ -28,21 +28,20 @@ Allez dans le menu `Advanced Options`, sélectionnez `Serial` et à la question 
 ## Configurer la connexion serial
 
 Tapez la commande :
-> stty 1200 cs7 evenp cstopb -igncr -inlcr -brkint -icrnl -opost -isig -icanon -iexten -F /dev/ttyUSB0
+> sudo stty 1200 cs7 evenp cstopb -igncr -inlcr -brkint -icrnl -opost -isig -icanon -iexten -F /dev/ttyUSB0
+
 *(Cette opération n'est pas persistante, il faut la retaper après chaque reboot ou la mettre dans un script de démmarage)*
 
 Vérifiez que la connexion est active avec la commande :
-> sudo cat /dev/ttyUSB0
+> cat /dev/ttyUSB0
 
 Vous devriez voir apparaître les informations qui transitent sur la liaison teleinfo.
-TODO N'affiche rien
 
 **Si ca ne marche pas, essayez avec l'outil `picocom` :**
 > sudo apt-get install picocom
-> sudo picocom -b 1200 -d 7 -p e -f n /dev/ttyUSB0
+> picocom -b 1200 -d 7 -p e -f n /dev/ttyUSB0
 
 Vous devriez voir apparaître les informations qui transitent sur la liaison teleinfo.
-TODO N'affiche rien
 
 *(Pour sortir de `picocom`, utilisez la combinaison `CTRL+A` puis `CTRL+X`)*
 
