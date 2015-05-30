@@ -97,7 +97,7 @@ Editez ensuite le fichier /etc/wpa_supplicant/wpa_supplicant.conf
 > # Pairwise can be CCMP or TKIP (for WPA2 or WPA1)
 > pairwise=TKIP
 > 
-> #Authorization option should be OPEN for both WPA1/WPA2 (in less commonly used are SHARED and LEAP)
+> &num;Authorization option should be OPEN for both WPA1/WPA2 (in less commonly used are SHARED and LEAP)
 > auth_alg=OPEN
 > }
 
