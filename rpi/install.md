@@ -88,16 +88,16 @@ Editez ensuite le fichier /etc/wpa_supplicant/wpa_supplicant.conf
 > ssid="freebox_VDFIYA"
 > psk="mirabeau"
 > 
-> # Protocol type can be: RSN (for WP2) and WPA (for WPA1)
+> &num; Protocol type can be: RSN (for WP2) and WPA (for WPA1)
 > proto=WPA
 > 
-> # Key management type can be: WPA-PSK or WPA-EAP (Pre-Shared or Enterprise)
+> &num; Key management type can be: WPA-PSK or WPA-EAP (Pre-Shared or Enterprise)
 > key_mgmt=WPA-PSK
 > 
-> # Pairwise can be CCMP or TKIP (for WPA2 or WPA1)
+> &num; Pairwise can be CCMP or TKIP (for WPA2 or WPA1)
 > pairwise=TKIP
 > 
-> &num;Authorization option should be OPEN for both WPA1/WPA2 (in less commonly used are SHARED and LEAP)
+> &num; Authorization option should be OPEN for both WPA1/WPA2 (in less commonly used are SHARED and LEAP)
 > auth_alg=OPEN
 > }
 
