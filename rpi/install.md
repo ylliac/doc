@@ -64,42 +64,42 @@ Editez le fichier /etc/network/interfaces :
 > sudo nano /etc/network/interfaces
 
 ... et saisissez les informations suivantes :
-> auto lo
-> iface lo inet loopback
-> 
-> auto eth0
-> allow-hotplug eth0
-> iface eth0 inet manual
-> 
-> auto wlan0
-> allow-hotplug wlan0
-> iface wlan0 inet dhcp
-> wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-> iface default inet dhcp
+> auto lo  
+> iface lo inet loopback  
+>   
+> auto eth0  
+> allow-hotplug eth0  
+> iface eth0 inet manual  
+>   
+> auto wlan0  
+> allow-hotplug wlan0  
+> iface wlan0 inet dhcp  
+> wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf  
+> iface default inet dhcp  
 
 Editez ensuite le fichier /etc/wpa_supplicant/wpa_supplicant.conf
 > sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 ... et saisissez les informations suivantes :
-> ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-> update_config=1
-> 
-> network={
-> ssid="freebox_VDFIYA"
-> psk="mirabeau"
-> 
-> &num; Protocol type can be: RSN (for WP2) and WPA (for WPA1)
-> proto=WPA
-> 
-> &num; Key management type can be: WPA-PSK or WPA-EAP (Pre-Shared or Enterprise)
-> key_mgmt=WPA-PSK
-> 
-> &num; Pairwise can be CCMP or TKIP (for WPA2 or WPA1)
-> pairwise=TKIP
-> 
-> &num; Authorization option should be OPEN for both WPA1/WPA2 (in less commonly used are SHARED and LEAP)
-> auth_alg=OPEN
-> }
+> ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev  
+> update_config=1  
+>   
+> network={  
+> ssid="freebox_VDFIYA"  
+> psk="mirabeau"  
+>   
+> &num; Protocol type can be: RSN (for WP2) and WPA (for WPA1)  
+> proto=WPA  
+>   
+> &num; Key management type can be: WPA-PSK or WPA-EAP (Pre-Shared or Enterprise)  
+> key_mgmt=WPA-PSK  
+>   
+> &num; Pairwise can be CCMP or TKIP (for WPA2 or WPA1)  
+> pairwise=TKIP  
+>   
+> &num; Authorization option should be OPEN for both WPA1/WPA2 (in less commonly used are SHARED and LEAP)  
+> auth_alg=OPEN  
+> }  
 
 Maintenant redémarrez et allez vite débrancher le cable ethernet !
 > sudo reboot
