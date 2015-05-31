@@ -4,7 +4,7 @@
 ## Prérequis
 
 Installez les modules suivants :
-> sudo apt-get install  libao-dev libssl-dev git avahi-utils libwww-perl
+> sudo apt-get install  libao-dev libssl-dev git avahi-utils libwww-perl  
 > sudo apt-get install libcrypt-openssl-rsa-perl libio-socket-inet6-perl  libmodule-build-perl
 
 ## Récupérer le code de Shairport
@@ -12,25 +12,25 @@ Installez les modules suivants :
 Shairport est l'implémentation libre du protocole derrière Airplay. Il ne fonctionne que pour l'audio (Airplay 1.0).
 
 Créez un dossier pour télécharger les sources :
-> mkdir projects
-> cd projects
-> mkdir airplay-audio-project
-> cd airplay-audio-project
+> mkdir projects  
+> cd projects  
+> mkdir airplay-audio-project  
+> cd airplay-audio-project  
 
 Si vous désirez utiliser iOS 6+, exécutez les commandes suivantes **(non testé)** :
-> git clone https://github.com/njh/perl-net-sdp.git
-> cd perl-net-sdp
-> perl Build.PL
-> ./Build
-> ./Build test
-> sudo ./Build install
-> cd ..
+> git clone https://github.com/njh/perl-net-sdp.git  
+> cd perl-net-sdp  
+> perl Build.PL  
+> ./Build  
+> ./Build test  
+> sudo ./Build install  
+> cd ..  
 
 Enfin, téléchargez les sources de Shairport depuis Git et compilez :
-> git clone https://github.com/abrasive/shairport.git
-> cd shairport
-> make
-> sudo make install
+> git clone https://github.com/abrasive/shairport.git  
+> cd shairport  
+> make  
+> sudo make install  
 
 ## Tester
 
@@ -47,9 +47,9 @@ Vous devriez entendre le son sur les enceintes auxquelles vous avez connecté le
 ## Faire en sorte que Shaiport se lance au démarrage
 
 Tapez les commandes suivantes :
-> sudo cp shairport.init.sample /etc/init.d/shairport
-> sudo chmod +x /etc/init.d/shairport
-> sudo update-rc.d shairport defaults
+> sudo cp shairport.init.sample /etc/init.d/shairport  
+> sudo chmod +x /etc/init.d/shairport  
+> sudo update-rc.d shairport defaults  
 
 ... et redémarrez le RPi :
 > sudo reboot
