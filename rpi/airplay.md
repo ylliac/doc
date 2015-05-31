@@ -47,7 +47,7 @@ Vous devriez entendre le son sur les enceintes auxquelles vous avez connecté le
 ## Faire en sorte que Shaiport se lance au démarrage
 
 Tapez les commandes suivantes :
-> sudo cp scripts/debian/init.d/shairport /etc/init.d/shairport
+> sudo cp scripts/debian/init.d/shairport /etc/init.d/shairport  
 > sudo chmod +x /etc/init.d/shairport  
 > sudo update-rc.d shairport defaults  
 
