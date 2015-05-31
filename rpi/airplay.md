@@ -68,7 +68,7 @@ Puis
 > USER=pi  
 > GROUP=pi
 
-... et redémarrez le RPi :
+Pour terminer, redémarrez le RPi et vérifiez que ca marche :
 > sudo reboot
 
 
