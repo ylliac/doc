@@ -51,6 +51,23 @@ Tapez les commandes suivantes :
 > sudo chmod +x /etc/init.d/shairport  
 > sudo update-rc.d shairport defaults  
 
+Editez ensuite le fichier `/etc/init.d/shairport` :
+> sudo nano /etc/init.d/shairport
+
+Et changez 
+> DAEMON=/usr/bin/shairport
+
+... en
+> DAEMON=/usr/local/bin/shairport
+
+Puis 
+> USER=shairport  
+> GROUP=nogroup  
+
+... en
+> USER=pi  
+> GROUP=pi
+
 ... et redémarrez le RPi :
 > sudo reboot
 
