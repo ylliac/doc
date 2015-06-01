@@ -72,6 +72,13 @@ Pour terminer, redémarrez le RPi et vérifiez que ca marche :
 > sudo reboot
 
 
+# Problème de bruit avec la sortie audio jack
+
+Si vous un peu de bruit en branchant la sortie jack du RPi, essayez la commande suivante :
+> amixer  set PCM,0 97%
+
+Si cela ne résoud pas le problème, essayez de changer d'alimentation (non testé).
+
 # Sources
 
 http://raspberrypihq.com/how-to-turn-your-raspberry-pi-into-a-airplay-receiver-to-stream-music-from-your-iphone/
