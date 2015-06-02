@@ -1,29 +1,209 @@
 
+# Installer la dépendance Mocha
 
-- test avec karma, mocha, jasmine, chai, ... ?
+>bower install mocha --save
+
+# Déclarer le module `mocha`
+
+Modifiez le fichier `config.js` de la façon suivante :
+
+> //Define module catalog  
+> requirejs.config({  
+> &nbsp;    baseUrl: '.',  
+> &nbsp;    paths: {  
+> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
+> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
+> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
+> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
+> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
+> &nbsp;&nbsp;&nbsp;        **mocha: 'libs/mocha/mocha',**  
+> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
+> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
+> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
+> &nbsp;    }  
+> });  
+>   
+> //Load core modules  
+> require(['jquery', 'less'], function () {  
+> &nbsp;    require(['bootstrap'], function () {});  
+> });
+
+# Installer la dépendance Chai
+
+> bower install chai --save
+
+# Déclarer le module `chai`
+
+Modifiez le fichier `config.js` de la façon suivante :
+
+> //Define module catalog  
+> requirejs.config({  
+> &nbsp;    baseUrl: '.',  
+> &nbsp;    paths: {  
+> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
+> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
+> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
+> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
+> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
+> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
+> &nbsp;&nbsp;&nbsp;        **chai: 'libs/chai/chai',**   
+> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
+> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
+> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
+> &nbsp;    }  
+> });  
+>   
+> //Load core modules  
+> require(['jquery', 'less'], function () {  
+> &nbsp;    require(['bootstrap'], function () {});  
+> });
+
+# Créer le module `repeat` à tester
+
+Dans le dossier `javascript`, créez un fichier `repeat.js` qui contient :
+
+> define(function (require) {  
+>   
+>     if (!String.prototype.repeat) {  
+>         String.prototype.repeat = function (times) {  
+>             return new Array(times + 1).join(this);  
+>         }  
+>     }  
+>   
+> });  
+
+# Déclarer le module `repeat`
+
+Modifiez le fichier `config.js` de la façon suivante :
+
+> //Define module catalog  
+> requirejs.config({  
+> &nbsp;    baseUrl: '.',  
+> &nbsp;    paths: {  
+> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
+> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
+> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
+> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
+> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
+> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
+> &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai',   
+> &nbsp;&nbsp;&nbsp;        **repeat: 'javascripts/repeat',**  
+> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
+> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
+> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
+> &nbsp;    }  
+> });  
+>   
+> //Load core modules  
+> require(['jquery', 'less'], function () {  
+> &nbsp;    require(['bootstrap'], function () {});  
+> });
+
+# Créer le test `repeat.spec.js`
+
+Créez un dossier `test` dans le dossier `public`.
+
+Dans ce dossier, créez un fichier `repeat.spec.js` qui contient :
+
+> define(function (require) {  
+>     require('repeat');  
+>   
+>     describe("repeat", function () {  
+>         it("repeats strings", function () {  
+>             expect("abc".repeat(2)).toEqual("abcabc");  
+>             expect("abc".repeat(0)).toEqual("");  
+>         });  
+>     });  
+> });  
+
+# Déclarer le module `repeat.spec` 
+
+Modifiez le fichier `config.js` de la façon suivante :
+
+> //Define module catalog  
+> requirejs.config({  
+> &nbsp;    baseUrl: '.',  
+> &nbsp;    paths: {  
+> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
+> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
+> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
+> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
+> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
+> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
+> &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai',   
+> &nbsp;&nbsp;&nbsp;        repeat: 'javascripts/repeat',  
+> &nbsp;&nbsp;&nbsp;        **repeat.spec: 'test/repeat.spec',**  
+> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
+> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
+> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
+> &nbsp;    }  
+> });  
+>   
+> //Load core modules  
+> require(['jquery', 'less'], function () {  
+> &nbsp;    require(['bootstrap'], function () {});  
+> });
+
+
+# Créez le lanceur de test `runner.js`
+
+Dans le dossier `test`, créez un fichier `runner.js` qui contient :
+
+```javascript  
+define(function (require) {  
+    var mocha = require('mocha');  
+    mocha.setup('bdd');  
+    require('chai');  
+ 
+    //Add your tests here
+    require('repeat.spec');  
+ 
+    mocha.run();  
+});  
+``` 
+
+# Déclarer le module `test` 
+
+Modifiez le fichier `config.js` de la façon suivante :
+
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: 'libs/jquery/dist/jquery.min',  
+    bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
+    react: 'libs/react/react.min',  
+    less: 'libs/less/dist/less.min',  
+    underscore: 'libs/underscore/underscore-min',  
+    mocha: 'libs/mocha/mocha',  
+    chai: 'libs/chai/chai',   
+    repeat: 'javascripts/repeat',  
+    repeat.spec: 'test/repeat.spec',  
+    **test: 'test/runner',**  
+    index: 'javascripts/index',  
+    helloworld: 'javascripts/helloworld',  
+    hello: 'javascripts/hello'  
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery', 'less'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
+
+
+TODO 
+
+créer runner.html
+ou bien créer test.jade
+
+# Sources
 
 http://chaijs.com/
 https://nicolas.perriault.net/code/2013/testing-frontend-javascript-code-using-mocha-chai-and-sinon/
 http://www.2ality.com/2011/10/jasmine.html
 
 
-TODO
-
-
-bower install mocha --save
-ajouter mocha dans config.js
-
-bower install chai --save
-ajouter chai dans config.js
-
-créer repeat.js
-ajouter repeat dans config.js
-
-créer dossier test
-créer repeat.spec.js
-ajouter repeat.spec dans config.js
-créer runner.js
-ajouter runner dans config.js
-
-créer runner.html
 
