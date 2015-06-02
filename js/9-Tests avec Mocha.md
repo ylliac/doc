@@ -273,12 +273,6 @@ Lancez le serveur :
 
 ... et allez sur la page [http://localhost:3000/test](http://localhost:3000/test).
 
-
-TODO 
- Remplacer les blocs de code > par des ```  
- Remettre des /dans tous les config.js et dans data-main
- Résoudre les bugs
-
 # Sources
 
 http://chaijs.com/  
