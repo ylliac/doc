@@ -115,16 +115,22 @@ Créez un dossier `test` dans le dossier `public`.
 
 Dans ce dossier, créez un fichier `repeat.spec.js` qui contient :
 
-> define(function (require) {  
->     require('repeat');  
->   
->     describe("repeat", function () {  
->         it("repeats strings", function () {  
->             expect("abc".repeat(2)).toEqual("abcabc");  
->             expect("abc".repeat(0)).toEqual("");  
->         });  
->     });  
-> });  
+```javascript
+define(function (require) {
+    require('mocha');
+    var chai = require('chai');
+    require('repeat');
+
+    var expect = chai.expect;
+
+    describe("repeat", function () {
+        it("repeats strings", function () {
+            expect("abc".repeat(2)).to.equal("abcabc");
+            expect("abc".repeat(0)).to.equal("");
+        });
+    });
+});
+```
 
 # Déclarer le module `repeat.spec` 
 
@@ -279,6 +285,8 @@ TODO
 http://chaijs.com/  
 https://nicolas.perriault.net/code/2013/testing-frontend-javascript-code-using-mocha-chai-and-sinon/
 http://www.2ality.com/2011/10/jasmine.html
+http://stackoverflow.com/questions/9369690/access-global-mocha-js-functions-when-using-require-js
+http://stackoverflow.com/questions/19191384/how-can-i-solve-referenceerror-expect-is-not-defined-error-message
 
 
 
