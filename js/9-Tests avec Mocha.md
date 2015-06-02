@@ -7,26 +7,29 @@
 
 Modifiez le fichier `config.js` de la façon suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
-> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
-> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha', //<-- Ajout    
-> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
-> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
-> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery', 'less'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });
+
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    less: '/libs/less/dist/less.min',  
+    underscore: '/libs/underscore/underscore-min',  
+    mocha: '/libs/mocha/mocha', //<-- Ajout  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld',  
+    hello: '/javascripts/hello'  
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery', 'less'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 # Installer la dépendance Chai
 
@@ -36,27 +39,30 @@ Modifiez le fichier `config.js` de la façon suivante :
 
 Modifiez le fichier `config.js` de la façon suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
-> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
-> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
-> &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai', //<-- Ajout     
-> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
-> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
-> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery', 'less'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });
+
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    less: '/libs/less/dist/less.min',  
+    underscore: '/libs/underscore/underscore-min',  
+    mocha: '/libs/mocha/mocha',  
+    chai: '/libs/chai/chai', //<-- Ajout  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld',  
+    hello: '/javascripts/hello'  
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery', 'less'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 # Créer le module `repeat` à tester
 
@@ -76,28 +82,32 @@ Dans le dossier `javascript`, créez un fichier `repeat.js` qui contient :
 
 Modifiez le fichier `config.js` de la façon suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
-> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
-> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
-> &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai',   
-> &nbsp;&nbsp;&nbsp;        repeat: 'javascripts/repeat', //<-- Ajout  
-> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
-> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
-> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery', 'less'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });
+
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    less: '/libs/less/dist/less.min',  
+    underscore: '/libs/underscore/underscore-min',  
+    mocha: '/libs/mocha/mocha',  
+    chai: '/libs/chai/chai',   
+    repeat: '/javascripts/repeat', //<-- Ajout  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld',  
+    hello: '/javascripts/hello'  
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery', 'less'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
+
 
 # Créer le test `repeat.spec.js`
 
@@ -120,30 +130,32 @@ Dans ce dossier, créez un fichier `repeat.spec.js` qui contient :
 
 Modifiez le fichier `config.js` de la façon suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
-> &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
-> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
-> &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai',   
-> &nbsp;&nbsp;&nbsp;        repeat: 'javascripts/repeat',  
-> &nbsp;&nbsp;&nbsp;        repeat_spec: 'test/repeat.spec', //<-- Ajout  
-> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
-> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
-> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery', 'less'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });
 
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    less: '/libs/less/dist/less.min',  
+    underscore: '/libs/underscore/underscore-min',  
+    mocha: '/libs/mocha/mocha',  
+    chai: '/libs/chai/chai',   
+    repeat: '/javascripts/repeat',  
+    repeat_spec: '/test/repeat.spec', //<-- Ajout  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld',  
+    hello: '/javascripts/hello'  
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery', 'less'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 # Créez le lanceur de test `runner.js`
 
@@ -171,19 +183,19 @@ Modifiez le fichier `config.js` de la façon suivante :
 requirejs.config({  
   baseUrl: '.',  
   paths: {  
-    jquery: 'libs/jquery/dist/jquery.min',  
-    bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-    react: 'libs/react/react.min',  
-    less: 'libs/less/dist/less.min',  
-    underscore: 'libs/underscore/underscore-min',  
-    mocha: 'libs/mocha/mocha',  
-    chai: 'libs/chai/chai',   
-    repeat: 'javascripts/repeat',  
-    repeat_spec: 'test/repeat.spec',  
-    test: 'test/runner', //<-- Ajout  
-    index: 'javascripts/index',  
-    helloworld: 'javascripts/helloworld',  
-    hello: 'javascripts/hello'  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    less: '/libs/less/dist/less.min',  
+    underscore: '/libs/underscore/underscore-min',  
+    mocha: '/libs/mocha/mocha',  
+    chai: '/libs/chai/chai',   
+    repeat: '/javascripts/repeat',  
+    repeat_spec: '/test/repeat.spec',  
+    test: '/test/runner', //<-- Ajout  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld',  
+    hello: '/javascripts/hello'  
   }  
 });  
  
