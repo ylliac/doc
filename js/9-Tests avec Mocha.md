@@ -254,7 +254,7 @@ app.use('/users', users);
 Lancez le serveur :
 > npm start
 
-... et allez sur la page http://localhost:3000/test.
+... et allez sur la page [http://localhost:3000/test](http://localhost:3000/test).
 
 
 TODO 
