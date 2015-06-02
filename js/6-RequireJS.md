@@ -9,7 +9,7 @@
 
 Ajouter cette ligne dans la partie `head` du fichier `layout.jade` :
 
-> script(data-main='config', src='/libs/requirejs/require.js')
+> script(data-main='/config', src='/libs/requirejs/require.js')
 
 ## Créer le fichier de configuration 
 
@@ -17,20 +17,23 @@ Créer un fichier `config.js` dans le dossier `public`.
 
 Ajouter le contenu suivant :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min'  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });  
+
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min'
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 ## Supprimer toutes les autres lignes de chargement de scripts dans le layout
 
@@ -56,21 +59,24 @@ Créer un fichier `index.js` dans le dossier `public/javascripts`.
 
 Dans le fichier `config.js`, ajouter la ligne suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        **index: 'javascripts/index'**  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });  
+
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    index: '/javascripts/index' //<-- Ajout     
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 ## Appeler le module
 
@@ -122,23 +128,25 @@ Modifiez le fichier `helloworld.jsx` :
 
 Dans le fichier `config.js`, ajouter la ligne suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
-> &nbsp;&nbsp;&nbsp;        **helloworld: 'javascripts/helloworld'**  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });  
 
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld' //<-- Ajout   
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery', 'less'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 ## Appeler le module
 
@@ -207,23 +215,26 @@ Pour cela, créer le fichier `hello.jsx` :
 
 Dans le fichier `config.js`, ajouter la ligne suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
-> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
-> &nbsp;&nbsp;&nbsp;        **hello: 'javascripts/hello'**  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });  
+
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld',  
+    hello: '/javascripts/hello' //<-- Ajout    
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 ## Tester
 
