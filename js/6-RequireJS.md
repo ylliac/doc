@@ -26,7 +26,13 @@ requirejs.config({
     jquery: '/libs/jquery/dist/jquery.min',  
     bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
     react: '/libs/react/react.min'
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        }
+    }  
 });  
  
 //Load core modules  
