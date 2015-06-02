@@ -8,26 +8,28 @@
 
 Modifiez le fichier `config.js` de la façon suivante :
 
-> //Define module catalog  
-> requirejs.config({  
-> &nbsp;    baseUrl: '.',  
-> &nbsp;    paths: {  
-> &nbsp;&nbsp;&nbsp;        jquery: 'libs/jquery/dist/jquery.min',  
-> &nbsp;&nbsp;&nbsp;        bootstrap: 'libs/bootstrap/dist/js/bootstrap.min',  
-> &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
-> &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
-> &nbsp;&nbsp;&nbsp;        **underscore: 'libs/underscore/underscore-min',**
-> &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
-> &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
-> &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
-> &nbsp;    }  
-> });  
->   
-> //Load core modules  
-> require(['jquery', 'less'], function () {  
-> &nbsp;    require(['bootstrap'], function () {});  
-> });
 
+```javascript
+//Define module catalog  
+requirejs.config({  
+  baseUrl: '.',  
+  paths: {  
+    jquery: '/libs/jquery/dist/jquery.min',  
+    bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
+    react: '/libs/react/react.min',  
+    less: '/libs/less/dist/less.min',  
+    underscore: '/libs/underscore/underscore-min', //<-- Ajout  
+    index: '/javascripts/index',  
+    helloworld: '/javascripts/helloworld',  
+    hello: '/javascripts/hello'  
+  }  
+});  
+ 
+//Load core modules  
+require(['jquery', 'less'], function () {  
+  require(['bootstrap'], function () {});  
+});
+```
 
 ## Ajouter une instruction utilisant underscore
 
