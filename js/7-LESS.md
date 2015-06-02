@@ -21,7 +21,13 @@ requirejs.config({
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld',  
     hello: '/javascripts/hello'  
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        }
+    }   
 });  
  
 //Load core modules  
