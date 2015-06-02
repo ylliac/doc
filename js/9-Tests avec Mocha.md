@@ -193,11 +193,72 @@ require(['jquery', 'less'], function () {
 });
 ```
 
+# Créer la page de test
+
+Dans le dossier `views`, créez un fichier `test.jade` qui contient :
+
+```
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    
+  #mocha
+    p
+      a(href='.') Index
+  
+  #messages
+  
+  #fixtures
+
+  script.
+    require(['config'], function() {
+      require(['test'], function() {
+      });
+    });
+```
+
+Puis dans le dossier `routes`, créez un fichier `test.js` qui contient :
+
+```javascript
+var express = require('express');
+var router = express.Router();
+
+/* GET test page. */
+router.get('/', function (req, res, next) {
+    res.render('test', {
+        title: 'Tests'
+    });
+});
+
+module.exports = router;
+```
+
+Et enfin modifiez le fichier `app.js` pour ajouter les lignes suivantes :
+
+```javascript
+var routes = require('./routes/index');
+var users = require('./routes/users');
+**var test = require('./routes/test');**
+```
+
+```javascript
+app.use('/', routes);
+app.use('/users', users);
+**app.use('/test', test);**
+```
+
+# Tester
+
+Lancez le serveur :
+> npm start
+
+... et allez sur la page http://localhost:3000/test.
+
 
 TODO 
-
-créer runner.html
-ou bien créer test.jade
+ Résoudre les bugs
 
 # Sources
 
