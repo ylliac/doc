@@ -132,7 +132,7 @@ Modifiez le fichier `config.js` de la façon suivante :
 > &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
 > &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai',   
 > &nbsp;&nbsp;&nbsp;        repeat: 'javascripts/repeat',  
-> &nbsp;&nbsp;&nbsp;        **repeat.spec: 'test/repeat.spec',**  
+> &nbsp;&nbsp;&nbsp;        **repeat_spec: 'test/repeat.spec',**  
 > &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
 > &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
 > &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
@@ -156,7 +156,7 @@ define(function (require) {
     require('chai');  
  
     //Add your tests here
-    require('repeat.spec');  
+    require('repeat_spec');  
  
     mocha.run();  
 });  
@@ -179,7 +179,7 @@ requirejs.config({
     mocha: 'libs/mocha/mocha',  
     chai: 'libs/chai/chai',   
     repeat: 'javascripts/repeat',  
-    repeat.spec: 'test/repeat.spec',  
+    repeat_spec: 'test/repeat.spec',  
     **test: 'test/runner',**  
     index: 'javascripts/index',  
     helloworld: 'javascripts/helloworld',  
@@ -262,7 +262,7 @@ TODO
 
 # Sources
 
-http://chaijs.com/
+http://chaijs.com/  
 https://nicolas.perriault.net/code/2013/testing-frontend-javascript-code-using-mocha-chai-and-sinon/
 http://www.2ality.com/2011/10/jasmine.html
 
