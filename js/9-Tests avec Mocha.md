@@ -119,9 +119,8 @@ Dans ce dossier, créez un fichier `repeat.spec.js` qui contient :
 define(function (require) {
     require('mocha');
     var chai = require('chai');
-    require('repeat');
-
     var expect = chai.expect;
+    require('repeat');
 
     describe("repeat", function () {
         it("repeats strings", function () {
