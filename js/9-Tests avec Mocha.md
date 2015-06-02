@@ -16,7 +16,7 @@ Modifiez le fichier `config.js` de la façon suivante :
 > &nbsp;&nbsp;&nbsp;        react: 'libs/react/react.min',  
 > &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
 > &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
-> &nbsp;&nbsp;&nbsp;        **mocha: 'libs/mocha/mocha',**  
+> &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha', //<-- Ajout    
 > &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
 > &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
 > &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
@@ -46,7 +46,7 @@ Modifiez le fichier `config.js` de la façon suivante :
 > &nbsp;&nbsp;&nbsp;        less: 'libs/less/dist/less.min',  
 > &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
 > &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
-> &nbsp;&nbsp;&nbsp;        **chai: 'libs/chai/chai',**   
+> &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai', //<-- Ajout     
 > &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
 > &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
 > &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
@@ -87,7 +87,7 @@ Modifiez le fichier `config.js` de la façon suivante :
 > &nbsp;&nbsp;&nbsp;        underscore: 'libs/underscore/underscore-min',  
 > &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
 > &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai',   
-> &nbsp;&nbsp;&nbsp;        **repeat: 'javascripts/repeat',**  
+> &nbsp;&nbsp;&nbsp;        repeat: 'javascripts/repeat', //<-- Ajout  
 > &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
 > &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
 > &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
@@ -132,7 +132,7 @@ Modifiez le fichier `config.js` de la façon suivante :
 > &nbsp;&nbsp;&nbsp;        mocha: 'libs/mocha/mocha',  
 > &nbsp;&nbsp;&nbsp;        chai: 'libs/chai/chai',   
 > &nbsp;&nbsp;&nbsp;        repeat: 'javascripts/repeat',  
-> &nbsp;&nbsp;&nbsp;        **repeat_spec: 'test/repeat.spec',**  
+> &nbsp;&nbsp;&nbsp;        repeat_spec: 'test/repeat.spec', //<-- Ajout  
 > &nbsp;&nbsp;&nbsp;        index: 'javascripts/index',  
 > &nbsp;&nbsp;&nbsp;        helloworld: 'javascripts/helloworld',  
 > &nbsp;&nbsp;&nbsp;        hello: 'javascripts/hello'  
@@ -180,7 +180,7 @@ requirejs.config({
     chai: 'libs/chai/chai',   
     repeat: 'javascripts/repeat',  
     repeat_spec: 'test/repeat.spec',  
-    **test: 'test/runner',**  
+    test: 'test/runner', //<-- Ajout  
     index: 'javascripts/index',  
     helloworld: 'javascripts/helloworld',  
     hello: 'javascripts/hello'  
@@ -240,13 +240,13 @@ Et enfin modifiez le fichier `app.js` pour ajouter les lignes suivantes :
 ```javascript
 var routes = require('./routes/index');
 var users = require('./routes/users');
-**var test = require('./routes/test');**
+var test = require('./routes/test'); //<-- Ajout  
 ```
 
 ```javascript
 app.use('/', routes);
 app.use('/users', users);
-<b>app.use('/test', test);</b>
+app.use('/test', test); //<-- Ajout  
 ```
 
 # Tester
@@ -258,6 +258,8 @@ Lancez le serveur :
 
 
 TODO 
+ Remplacer les blocs de code > par des ```  
+ Remettre des /dans tous les config.js et dans data-main
  Résoudre les bugs
 
 # Sources
