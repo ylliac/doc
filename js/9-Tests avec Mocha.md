@@ -22,7 +22,19 @@ requirejs.config({
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld',  
     hello: '/javascripts/hello'  
-  }  
+  },  
+
+    shim: {
+        react: {
+            exports: "React"
+        },
+        mocha: { //<-- Ajout  
+            init: function () {
+                this.mocha.setup('bdd');
+                return this.mocha;
+            }
+        }
+    } 
 });  
  
 //Load core modules  
@@ -55,7 +67,19 @@ requirejs.config({
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld',  
     hello: '/javascripts/hello'  
-  }  
+  },  
+
+    shim: {
+        react: {
+            exports: "React"
+        },
+        mocha: {
+            init: function () {
+                this.mocha.setup('bdd');
+                return this.mocha;
+            }
+        }
+    }  
 });  
  
 //Load core modules  
@@ -99,7 +123,19 @@ requirejs.config({
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld',  
     hello: '/javascripts/hello'  
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        },
+        mocha: {
+            init: function () {
+                this.mocha.setup('bdd');
+                return this.mocha;
+            }
+        }
+    }  
 });  
  
 //Load core modules  
@@ -153,7 +189,19 @@ requirejs.config({
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld',  
     hello: '/javascripts/hello'  
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        },
+        mocha: {
+            init: function () {
+                this.mocha.setup('bdd');
+                return this.mocha;
+            }
+        }
+    }  
 });  
  
 //Load core modules  
@@ -201,7 +249,19 @@ requirejs.config({
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld',  
     hello: '/javascripts/hello'  
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        },
+        mocha: {
+            init: function () {
+                this.mocha.setup('bdd');
+                return this.mocha;
+            }
+        }
+    }  
 });  
  
 //Load core modules  
