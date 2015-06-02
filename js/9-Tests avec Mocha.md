@@ -246,7 +246,7 @@ var users = require('./routes/users');
 ```javascript
 app.use('/', routes);
 app.use('/users', users);
-**app.use('/test', test);**
+<b>app.use('/test', test);</b>
 ```
 
 # Tester
