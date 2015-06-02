@@ -75,7 +75,13 @@ requirejs.config({
     bootstrap: '/libs/bootstrap/dist/js/bootstrap.min',  
     react: '/libs/react/react.min',  
     index: '/javascripts/index' //<-- Ajout     
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        }
+    }   
 });  
  
 //Load core modules  
@@ -145,7 +151,13 @@ requirejs.config({
     react: '/libs/react/react.min',  
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld' //<-- Ajout   
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        }
+    }   
 });  
  
 //Load core modules  
@@ -233,7 +245,13 @@ requirejs.config({
     index: '/javascripts/index',  
     helloworld: '/javascripts/helloworld',  
     hello: '/javascripts/hello' //<-- Ajout    
-  }  
+  },
+
+    shim: {
+        react: {
+            exports: "React"
+        }
+    }   
 });  
  
 //Load core modules  
