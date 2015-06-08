@@ -10,6 +10,7 @@ http://blog.xebia.fr/2013/06/05/jai-essaye-bower-loutil-de-gestion-des-dependanc
 http://hapijs.com/
 
 A l'air d'être plus scalable et pro qu'express.
+http://blog.octo.com/node-for-api-express-and-hapi-architecture-and-ecosystem/
 
 ## Test
 
