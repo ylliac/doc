@@ -5,6 +5,12 @@
 http://blog.xebia.fr/2013/06/05/jai-essaye-bower-loutil-de-gestion-des-dependances-front-end/
 
 
+## Serveur Hapi.js
+
+http://hapijs.com/
+
+A l'air d'être plus scalable et pro qu'express.
+
 ## Test
 
 - test avec karma, mocha, jasmine, chai, ... ?
