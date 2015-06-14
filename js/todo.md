@@ -12,6 +12,10 @@ http://hapijs.com/
 A l'air d'être plus scalable et pro qu'express.
 http://blog.octo.com/node-for-api-express-and-hapi-architecture-and-ecosystem/
 
+## Framework appli cross platform
+
+http://electron.atom.io/ (créé pour atom)
+
 ## Test
 
 - test avec karma, mocha, jasmine, chai, ... ?
