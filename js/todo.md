@@ -43,6 +43,9 @@ Utiliser des composants React pour faire un tableau avec formulaire
 ## Plateformes
 
 - Mobile avec cordova
+- Mobile avec ReactNative  
+-- https://github.com/facebook/react-native  
+-- http://facebook.github.io/react-native/docs/getting-started.html  
 - Desktop avec NWjs (node webkit)
 - Cross platform avec NativeScript ?
 
