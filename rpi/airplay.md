@@ -77,7 +77,7 @@ Pour terminer, redémarrez le RPi et vérifiez que ca marche :
 Si vous un peu de bruit en branchant la sortie jack du RPi, essayez la commande suivante :
 > amixer  set PCM,0 97%
 
-Si cela ne résoud pas le problème, essayez de changer d'alimentation (non testé).
+Si cela ne résoud pas le problème, essayez de changer d'alimentation.
 
 # Sources
 
