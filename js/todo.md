@@ -39,6 +39,10 @@ Utiliser des composants React pour faire un tableau avec formulaire
 ...et un graphique
 (avec D3.js ?)
 
+## Design
+
+Material Design Lite : http://www.getmdl.io/index.html
+
 
 ## Plateformes
 
