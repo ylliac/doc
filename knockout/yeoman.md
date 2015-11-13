@@ -8,11 +8,11 @@
 
 npm install -g yo
 npm install generator-ko
+yo ko
 
 
 
-
-TODO :
+# TODO 
 
 Gros tuto de réalisation d'une SPA avec yeoman, gulp...
 http://blog.stevensanderson.com/2014/06/11/architecting-large-single-page-applications-with-knockout-js/
