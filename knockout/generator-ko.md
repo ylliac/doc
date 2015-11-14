@@ -24,6 +24,12 @@ gulp
 npm install --save-dev babel-core@"~5.8.23"
 npm update
 
+## Problème avec intro.js : Unexpected token
+(http://stackoverflow.com/questions/33198584/gulp-failing-default-task-due-to-jquery-error-for-generator-ko)
+
+Dans `gulpfile.js`, ajouter `slash = require('slash')` dans la liste des plugins et ajouter `pathname = slash(pathname);` au début de la fonction `babelTranspile`.
+
+
 
 
 
