@@ -20,6 +20,7 @@ yo ko
 gulp
 
 ## Problème avec la dépendance `babel-core`
+(https://github.com/nenitiko/generator-ko/commit/66ad960289f22172ded1a52df689f5f021faa184)
 
 npm install --save-dev babel-core@"~5.8.23"
 npm update
@@ -27,6 +28,7 @@ npm update
 ## Problème avec intro.js : Unexpected token
 (http://stackoverflow.com/questions/33198584/gulp-failing-default-task-due-to-jquery-error-for-generator-ko)
 
+Executer `npm install --save-dev slash@"^1.0.0"`.
 Dans `gulpfile.js`, ajouter `slash = require('slash')` dans la liste des plugins et ajouter `pathname = slash(pathname);` au début de la fonction `babelTranspile`.
 
 
