@@ -13,7 +13,7 @@ Générateur Knockout : npm install generator-ko
 Gulp : npm install -g gulp
 Babel : npm install -g babel-cli
 HTTP Server : npm install -g http-server
-Karma : npm install -g karma
+Karma : npm install -g karma-cli
 
 ## Créer le squelette de l'appli
 
