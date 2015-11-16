@@ -1,5 +1,5 @@
 
-TODO Ajouter un graph avec D3
+TODO Ajouter un graph avec D3 
 http://bl.ocks.org/d3noob/b3ff6ae1c120eea654b5 
 http://gustavnikolaj.github.io/knockout-d3-line-graph/
 
