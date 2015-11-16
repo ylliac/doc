@@ -48,6 +48,12 @@ La version release : `http-server dist` après avoir lancé `gulp`.
 
 karma start
 
+# Aller plus loin
+
+## D3
+
+bower install --save-dev d3
+
 
 
 
