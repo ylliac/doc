@@ -52,7 +52,7 @@ karma start
 
 ## D3
 
-bower install --save-dev d3
+bower install --save d3
 
 
 
