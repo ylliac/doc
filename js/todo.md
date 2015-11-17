@@ -5,6 +5,12 @@
 http://blog.xebia.fr/2013/06/05/jai-essaye-bower-loutil-de-gestion-des-dependances-front-end/
 
 
+## Riot.js
+
+https://muut.com/blog/technology/riot-2.0/  
+http://riotjs.com/  
+https://github.com/riot/riot/issues/452  
+
 ## Serveur Hapi.js
 
 http://hapijs.com/
