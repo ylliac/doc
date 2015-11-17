@@ -1,4 +1,6 @@
 
+**TODO** Sur cet example, la liste des todos n'affiche pas les éléments même si le compteur est bien mis à jour... doit y avoir un probleme quelque part
+
 # RiotJS - Mise en place
 
 ## Dépendances
