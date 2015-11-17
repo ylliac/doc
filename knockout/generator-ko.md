@@ -1,7 +1,14 @@
 
-TODO Ajouter un graph avec D3 
-http://bl.ocks.org/d3noob/b3ff6ae1c120eea654b5 
-http://gustavnikolaj.github.io/knockout-d3-line-graph/
+**TODO** 
+
+Styliser le graph : 
+- http://bl.ocks.org/d3noob/b3ff6ae1c120eea654b5 
+- http://gustavnikolaj.github.io/knockout-d3-line-graph/
+ 
+Améliorer le format des dates
+
+Mettre les valeurs dans un tableau
+
 
 
 # Sources
@@ -47,12 +54,6 @@ La version release : `http-server dist` après avoir lancé `gulp`.
 ## Lancer les tests
 
 karma start
-
-# Aller plus loin
-
-## D3
-
-bower install --save d3
 
 
 
