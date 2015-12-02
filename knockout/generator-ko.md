@@ -19,12 +19,12 @@ http://hombredequeso.id.au/2015/03/17/installing-yo-ko.html
 
 ## Prérequis
 
-Yeoman : npm install -g yo
-Générateur Knockout : npm install generator-ko
-Gulp : npm install -g gulp
-Babel : npm install -g babel-cli
-HTTP Server : npm install -g http-server
-Karma : npm install -g karma-cli
+Yeoman : npm install -g yo  
+Générateur Knockout : npm install generator-ko  
+Gulp : npm install -g gulp  
+Babel : npm install -g babel-cli  
+HTTP Server : npm install -g http-server  
+Karma : npm install -g karma-cli  
 
 ## Créer le squelette de l'appli
 
