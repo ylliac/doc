@@ -1,9 +1,9 @@
 
 **TODO** 
 
-Passer les data-bind d3graph en balise <d3graph>, idem pour le reste
-
 Mettre les valeurs dans un tableau (datatable)
+
+Passer le data-bind datatables en balise <datatable>
   
 Utiliser Redux ! http://rackt.org/redux/  
 
