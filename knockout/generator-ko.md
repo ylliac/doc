@@ -1,14 +1,9 @@
 
-**TODO** 
-
-Mettre les valeurs dans un tableau (datatable)
-
-Passer le data-bind datatables en balise <datatable>
-  
-Utiliser Redux ! http://rackt.org/redux/  
 
 
 **DONE**  
+
+Mettre les valeurs dans un tableau (datatable)
 
 Styliser le graph : 
 - http://bl.ocks.org/d3noob/b3ff6ae1c120eea654b5 
