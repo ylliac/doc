@@ -1,5 +1,7 @@
 # TODO en cours
 
+Bien organiser les différents éléments de Redux (reducers, actions, store...) 
+
 Mettre en place redux undo avec deux boutons undo redo dans la navbar :
 https://github.com/omnidan/redux-undo
 
