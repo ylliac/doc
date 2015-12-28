@@ -119,7 +119,7 @@ devient
 ```js
 module.exports = {
     resolve: {
-      root: __dirname + "/src",
+      modulesDirectories: ['src', 'node_modules'],
       alias: {
               "backbone": "lib/backbone-1.1.0",
               "jquery": "lib/jquery-1.10.2",
@@ -160,6 +160,80 @@ loaders: [{
 }]
 ```
 
+## Copier le fichier HTML de l'application
+
+Ajouter la tache Gulp suivante :
+
+```js
+// Copies index.html
+gulp.task('html', function () {
+    return gulp.src('./src/index.html')
+        .pipe(gulp.dest('./dist/'));
+});
+```
+
+Le fichier index.html doit contenir l'instruction suivante :
+
+<script src="assets/bundle.js"></script>
+
+
+## Inclure les CSS
+
+Installez le CSS Loader : npm install css-loader --save-dev
+
+Puis ajoutez le dans les loaders :
+
+```js
+loaders: [{
+  test: /\.css$/,
+  loader: "css-loader"
+}]
+```
+
+Installez l'URL loader : npm install url-loader --save-dev
+
+Puis ajoutez le dans les loaders :
+
+```js
+loaders: [{
+  test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+  loader: 'url-loader?limit=100000' 
+}]
+```
+
+Installez le file loader : npm install file-loader --save-dev    
+(pas besoin de l'ajouter dans les loaders)
+
+Enfin, ajoutez dans startup.js les lignes suivantes :
+
+```js
+//CSS
+require("bootstrap/dist/css/bootstrap.min.css");
+require("datatables.net-bs/css/dataTables.bootstrap.css");
+require("css/styles.css");
+```
+
+## Problème : Bootstrap nécessite la dépendance jquery
+http://stackoverflow.com/questions/26749045/webpack-expressing-module-dependency
+
+Solution 1  : 
+Install expose-loader : npm install expose-loader --save-dev    
+
+Ajouter require('expose?$!expose?jQuery!jquery'); dans startup.js avant de faire un require sur bootstrap.
+
+Solution 2 (non testée mais plus propre) :
+
+Ajoutez le code suivant au fichier de configuration :
+
+```js
+plugins: [
+  new webpack.ProvidePlugin({
+     $: "jquery",
+     jQuery: "jquery"
+ })
+]
+```
+
 
 
 ## Liens Utiles
@@ -167,6 +241,7 @@ loaders: [{
 http://webpack.github.io/docs/configuration.html
 https://github.com/webpack/webpack-with-common-libs/blob/master/gulpfile.js
 http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples/
+https://webpack.github.io/docs/list-of-plugins.html
 
 
 
