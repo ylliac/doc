@@ -1,9 +1,9 @@
 # Mise en place
 
-TODO Se débarasser de RequireJS
-TODO Se débarasser de Bower
-TODO Ajouter un module babel pour de l'ES6
-TODO Ajouter un module TypeScript : http://www.jbrantly.com/typescript-and-webpack/
+TODO Se débarasser de RequireJS  
+TODO Se débarasser de Bower  
+TODO Ajouter un module babel pour de l'ES6  
+TODO Ajouter un module TypeScript : http://www.jbrantly.com/typescript-and-webpack/  
 
 
 
