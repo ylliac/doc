@@ -1,6 +1,6 @@
 # Mise en place
 
-TODO Utiliser le style-loader : https://github.com/webpack/style-loader
+TODO Utiliser le style-loader : https://github.com/webpack/style-loader  
 TODO Se débarasser de RequireJS  
 TODO Se débarasser de Bower  
 TODO Ajouter un module babel pour de l'ES6  
