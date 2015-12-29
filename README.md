@@ -1,10 +1,14 @@
 # TODO en cours
 
+Utiliser WebPack
+
 Bien organiser les différents éléments de Redux (reducers, actions, store...) 
 
 Mettre en place redux undo avec deux boutons undo redo dans la navbar avec une implémentation maison
 
 Mettre en place les dev tools : https://github.com/gaearon/redux-devtools
+
+Mettre en place les tests Karma
 
 [ABANDONNED] https://github.com/omnidan/redux-undo : ES6, pas forcément super intégré avec l'API actuelle
 
