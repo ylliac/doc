@@ -1,6 +1,5 @@
 # Mise en place
 
-TODO Trouver la fonction de refresh automatique  
 TODO Ajouter un module babel pour de l'ES6  
 TODO Ajouter un module TypeScript : http://www.jbrantly.com/typescript-and-webpack/  
 
@@ -235,6 +234,12 @@ plugins: [
 ]
 ```
 
+## Lancer le serveur
+
+Lancez la commande 'gulp' pour lancer le webpack web server.
+
+Allez ensuite sur l'URL suivante : http://localhost:8080/index.html.  
+Pour activer le refresh automatique, allez sur l'URL suivante : http://localhost:8080/webpack-dev-server/index.html.
 
 
 ## Liens Utiles
