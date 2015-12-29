@@ -1,8 +1,6 @@
 # Mise en place
 
-TODO Trouver la fonction de refresh automatique
-TODO Se débarasser de RequireJS  
-TODO Se débarasser de Bower  
+TODO Trouver la fonction de refresh automatique  
 TODO Ajouter un module babel pour de l'ES6  
 TODO Ajouter un module TypeScript : http://www.jbrantly.com/typescript-and-webpack/  
 
