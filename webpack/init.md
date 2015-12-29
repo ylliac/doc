@@ -1,6 +1,6 @@
 # Mise en place
 
-TODO Utiliser le style-loader : https://github.com/webpack/style-loader  
+TODO Trouver la fonction de refresh automatique
 TODO Se débarasser de RequireJS  
 TODO Se débarasser de Bower  
 TODO Ajouter un module babel pour de l'ES6  
@@ -65,6 +65,7 @@ gulp.task("webpack-dev-server", function(callback) {
 
     // Start a webpack-dev-server
     new WebpackDevServer(webpack(myConfig), {
+        contentBase: 'src',
         publicPath: "/" + myConfig.output.publicPath,
         stats: {
             colors: true
@@ -181,13 +182,14 @@ Le fichier index.html doit contenir l'instruction suivante :
 ## Inclure les CSS
 
 Installez le CSS Loader : npm install css-loader --save-dev
+Installez le Style Loader : npm install style-loader --save-dev
 
 Puis ajoutez le dans les loaders :
 
 ```js
 loaders: [{
   test: /\.css$/,
-  loader: "css-loader"
+  loader: "style-loader!css-loader"
 }]
 ```
 
