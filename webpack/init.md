@@ -241,6 +241,23 @@ Lancez la commande 'gulp' pour lancer le webpack web server.
 Allez ensuite sur l'URL suivante : http://localhost:8080/index.html.  
 Pour activer le refresh automatique, allez sur l'URL suivante : http://localhost:8080/webpack-dev-server/index.html.
 
+## Programmer en ES6
+
+Installez les dépendances babel et le babel loader : 
+npm install babel-loader babel-core babel-preset-es2015 --save-dev
+
+Ajoutez le loader suivant dans la configuration de webpack :
+
+```js
+loaders: [
+  {
+    test: /\.jsx?$/,
+    exclude: /(node_modules|bower_components)/,
+    loader: 'babel-loader'
+  }
+]
+```
+
 
 ## Liens Utiles
 
