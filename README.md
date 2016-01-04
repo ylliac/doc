@@ -1,8 +1,8 @@
 # TODO en cours
 
-Utiliser WebPack
-
 Bien organiser les différents éléments de Redux (reducers, actions, store...) 
+
+React avec JSX + React Hot Loader
 
 Mettre en place redux undo avec deux boutons undo redo dans la navbar avec une implémentation maison
 
@@ -21,3 +21,6 @@ OU se rappeller de la page courante après avoir mis à jour la table.
 
 [DONE] Trouver un moyen dans redux de ne pas mettre à jour chaque composant à chaque update du store
 => https://github.com/rackt/redux/issues/303#issuecomment-125184409
+
+[DONE] Utiliser WebPack
+
