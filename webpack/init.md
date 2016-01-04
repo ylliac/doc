@@ -1,9 +1,5 @@
 # Mise en place
 
-TODO Ajouter un module TypeScript : http://www.jbrantly.com/typescript-and-webpack/  
-
-
-
 ## Ajouter Webpack au projet
 
 npm install webpack --save-dev
@@ -256,6 +252,10 @@ loaders: [
   }
 ]
 ```
+
+### Programmer en TypeScript
+
+Pas testé : http://www.jbrantly.com/typescript-and-webpack/
 
 
 ## Liens Utiles
