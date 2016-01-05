@@ -1,16 +1,19 @@
 # TODO en cours
 
-Bien organiser les différents éléments de Redux (reducers, actions, store...) 
-
 React avec JSX + React Hot Loader
 
 Mettre en place redux undo avec deux boutons undo redo dans la navbar avec une implémentation maison
+https://github.com/omnidan/redux-undo
 
 Mettre en place les dev tools : https://github.com/gaearon/redux-devtools
 
 Mettre en place les tests Karma
 
-[ABANDONNED] https://github.com/omnidan/redux-undo : ES6, pas forcément super intégré avec l'API actuelle
+Mettre en place les tests ZombieJS
+
+Récupérer les données EDF avec https://github.com/lhuet/teleinfo-node
+
+[DONE] Bien organiser les différents éléments de Redux (reducers, actions, store...) 
 
 [DONE] Mettre un bouton pour charger les données plutot que de les pousser au fur et à mesure
 OU se rappeller de la page courante après avoir mis à jour la table.
