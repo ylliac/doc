@@ -2,6 +2,8 @@
 
 React avec JSX + React Hot Loader
 
+Archi correcte ? https://github.com/tj/frontend-boilerplate
+
 MaterialUI, React-bootstrap ?
 
 Mettre en place redux undo avec deux boutons undo redo dans la navbar avec une implémentation maison
