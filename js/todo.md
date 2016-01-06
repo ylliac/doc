@@ -5,6 +5,11 @@
 http://blog.xebia.fr/2013/06/05/jai-essaye-bower-loutil-de-gestion-des-dependances-front-end/
 
 
+## Frontend boilerplate
+
+A étudier :
+https://github.com/tj/frontend-boilerplate
+
 ## Riot.js
 
 https://muut.com/blog/technology/riot-2.0/  
