@@ -179,6 +179,3 @@ let expect = require('chai');
 expect(true).to.equal(true);
 ```
 
-## Non testé 
-
-Fonction de récupération de valeurs (grabTitle() par exemple) qui utilisent le mot clé yield.
