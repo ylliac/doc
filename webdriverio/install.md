@@ -131,10 +131,17 @@ Choisissez les options que vous préférez.
 Editez le test généré avec le code suivant :
 
 ```java
+'use strict';
+
+let assert = require('assert');	
+
 Feature('Login');
 
-Scenario('When a user log in, he should see main page', (I) => {
+Scenario('When a user log in, he should see main page', function*(I) {
+	
 	I.amOnPage('/login.html');
+	//pause();
+	
 	I.fillField('FR_User Name', 'manager');
 	I.fillField('FR_Password', 'manager');
 	I.click('FR_Login');
@@ -142,6 +149,9 @@ Scenario('When a user log in, he should see main page', (I) => {
 	I.waitForElement('#headerTitle h1', 10);
 	
 	I.seeInTitle('FR_Home');	
+	
+	var title = yield I.grabTitle();	
+	assert(title).equal('FR_Home');
 });
 ```
 
