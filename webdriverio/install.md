@@ -1,7 +1,7 @@
 
 # Mettre en place Webdriver.io 
 
- ##Télécharger Java 
+## Télécharger Java 
 
 Télecharger la dernière version du JDK : http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html.
 
