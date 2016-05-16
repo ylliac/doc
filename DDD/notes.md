@@ -14,11 +14,23 @@ Préambule : regarder cette [présentation de Sandro Mancuso](http://fr.slidesha
 
 Représente un use case.
 Ne peut pas appeler un autre application service.
+C'est le composant frontière donc c'est sur lui que l'on déclare les préocuppations de sécurité, de démarcation transactionnelle... .
 
 
 ### Domain service
 
 Encapsule un traitement qui ne tient pas naturellement dans une entité ou un value object.
+
+
+### Infrastructure service
+
+Un service technique qui ne représente pas forcément un concept métier (pas nécessairement compréhensible par la MOA).
+Par exemple, un service d'envoi d'email.
+
+L'interface est dans la couche métier, l'implémentation est dans la couche infrastructure.
+
+A noter que le repository est un infrastructure service spécialisé qui représente une collection.
+
 
 ### Entité
 
@@ -29,8 +41,16 @@ L'id peut être un value object :
 ### Repository
 
 Est une collection d'un type d'éléments avec des fonctions de requêtage avancée.
-
 L'interface est dans la couche domaine mais l'implémentation est contenu dans la couche infrastructure. 
+N'initie pas la transaction mais participe à la transaction courante.
+
+Attention, Add et Remove sont idempotents : faire 2 add revient à en faire un seul. (TODO A CREUSER)
+
+Nommages possibles :
+- BookRepository
+- Books
+- BookCollection
+- Library
 
 ## Lien avec MVC
 
