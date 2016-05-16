@@ -3,7 +3,7 @@
 
 ## Schéma
 
-![schema](DDD.png)
+![DDD](DDD.png)
 
 
 ## Briques
@@ -32,7 +32,7 @@ L'interface est dans la couche domaine mais l'implémentation est contenu dans l
 
 ## Lien avec MVC
 
-TODO Image
+![MVC](MVC.PNG)
 
 Approche classique :
 - M est le modèle de persistance anémique (anti pattern anemic model)
