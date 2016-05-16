@@ -50,6 +50,22 @@ Approche DDD :
 
 => Le plus gros de l'application est dans le M de MVC, le V et le C ne sont que la couche de présentation (Delivery Mechanism)
 
+## Organisation des classes
+
+Plus de détails [ici](http://fr.slideshare.net/sandromancuso/crafted-design-geecon-2014)
+
+Module Core :
+
+- infrastructure : packages parsers, repositories, services...
+- model : Modèle domaine, ce dont l'application parle. Regroupé par catégorie de domaine liés entre eux.
+- use_cases : cas d'utilisations, ce que l'application fait. Regroupé par theme / epic
+ 
+Module Web :
+
+- infrastructure : par exemple parsers XML / JSON
+- controllers : flux de contrôle, invoque les uses cases dans le module core
+- view : par exemple page objects, validators...
+- ../webapp : ressources statiques
 
 
 
