@@ -3,7 +3,8 @@
 
 ## Schéma
 
-TODO
+![schema](DDD.png)
+
 
 ## Briques
 
