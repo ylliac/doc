@@ -1,6 +1,8 @@
 
 # Domain Driven Design
 
+Préambule : regarder cette [présentation de Sandro Mancuso](http://fr.slideshare.net/sandromancuso/crafted-design-geecon-2014)
+
 ## Schéma
 
 ![DDD](DDD.png)
