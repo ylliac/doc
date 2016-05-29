@@ -84,6 +84,8 @@ Module Core :
 
 ![model](model.PNG) 
 
+On va avoir un sous module par aggregat.
+
 - use_cases : cas d'utilisations, ce que l'application fait. Regroupé par theme / epic
 
 ![use_cases](use_cases.PNG) 
@@ -97,9 +99,41 @@ Module Web :
 - ../webapp : ressources statiques
 
 
+## Agregats
+
+### Invariants et transactions
+
+Les aggregats garantissent les invariants.
+
+![aggregat_invariant](aggregat_invariant.PNG)
+
+Les frontières des Agrégats sont choisies de façon à permettre la cohérence transactionnelle des invariants.
+
+![aggregat_transactionnel](aggregat_transactionnel.PNG)
+
+Une transaction ne doit modifier qu'un aggregat ! (risque de deadlock)
+
+![aggregat_deadlock](aggregat_deadlock.PNG)
+
+Remplacer une relation directe entre deux aggregat par un value object ID partagé permet de limiter le risque de modification dde deux agrégats dans une même transaction (c'est le principe d'une Foreign Key dans une BDD).
+Les relations directes entre agrégats ne sont pas interdites à condition de ne jamais modifier les deux Agrégats dans une même transaction.
 
 
+### Aggregate root
 
+Puisque l'Aggregate Root participe à un invariant commun avec les autre Entités de l'Agrégat, le moyen le plus sûr de s'en assurer et de ne permettre de modifier l'Agrégat qu'en passant par l'Aggregate Root.
+
+L'Aggregate Root doit être: 
+
+- Le point d'entrée unique des modifications de l'Agrégat: 
+-- Ne pas exporter l'état interne de l'Agrégat pour modification,
+-- L'Agreggate Root expose les méthodes nécessaires de modification de l'Agrégat
+- Le seul objet de l'Agrégat référencé par des objets extérieurs
+
+![aggregat_root](aggregat_root.PNG)
+
+
+![aggregat_root_content](aggregat_root_content.PNG)
 
 
 
