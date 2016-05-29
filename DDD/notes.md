@@ -118,7 +118,6 @@ Une transaction ne doit modifier qu'un aggregat ! (risque de deadlock)
 Remplacer une relation directe entre deux aggregat par un value object ID partagé permet de limiter le risque de modification dde deux agrégats dans une même transaction (c'est le principe d'une Foreign Key dans une BDD).
 Les relations directes entre agrégats ne sont pas interdites à condition de ne jamais modifier les deux Agrégats dans une même transaction.
 
-
 ### Aggregate root
 
 Puisque l'Aggregate Root participe à un invariant commun avec les autre Entités de l'Agrégat, le moyen le plus sûr de s'en assurer et de ne permettre de modifier l'Agrégat qu'en passant par l'Aggregate Root.
@@ -132,8 +131,14 @@ L'Aggregate Root doit être:
 
 ![aggregat_root](aggregat_root.PNG)
 
-
 ![aggregat_root_content](aggregat_root_content.PNG)
+
+### Visibilité des classes
+
+La visibilité publique par défaut peut entrainer un design complexe et qui ne respecte pas le rôle de point d'accès unique de l'aggregat. 
+Pour encourager cela, préferer la visibilité package et ne passer en publique que les classes qui doivent être accessible de l'extérieur (aggregate root et value objects par exemple).
+
+Dans maven, le découpage src/main/java et src/test/java permet de séparer les classes de test du code de production tout en laissant la possibilité de les mettre dans le même package que les classes à tester.
 
 
 
