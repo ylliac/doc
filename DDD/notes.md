@@ -77,8 +77,17 @@ Plus de détails [ici](http://fr.slideshare.net/sandromancuso/crafted-design-gee
 Module Core :
 
 - infrastructure : packages parsers, repositories, services...
+
+![infrastructure](infrasctructure.PNG) 
+
 - model : Modèle domaine, ce dont l'application parle. Regroupé par catégorie de domaine liés entre eux.
+
+![model](model.PNG) 
+
 - use_cases : cas d'utilisations, ce que l'application fait. Regroupé par theme / epic
+
+![use_cases](use_cases.PNG) 
+
  
 Module Web :
 
