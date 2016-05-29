@@ -78,7 +78,7 @@ Module Core :
 
 - infrastructure : packages parsers, repositories, services...
 
-![infrastructure](infrasctructure.PNG) 
+![infrastructure](infrastructure.PNG) 
 
 - model : Modèle domaine, ce dont l'application parle. Regroupé par catégorie de domaine liés entre eux.
 
