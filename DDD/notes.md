@@ -129,9 +129,9 @@ L'Aggregate Root doit être:
 -- L'Agreggate Root expose les méthodes nécessaires de modification de l'Agrégat
 - Le seul objet de l'Agrégat référencé par des objets extérieurs
 
-![aggregat_root](aggregat_root.PNG)
+![aggregate_root](aggregate_root.PNG)
 
-![aggregat_root_content](aggregat_root_content.PNG)
+![aggregate_root_content](aggregate_root_content.PNG)
 
 ### Visibilité des classes
 
