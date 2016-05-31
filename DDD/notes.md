@@ -16,6 +16,7 @@ Représente un use case.
 Ne peut pas appeler un autre application service.
 C'est le composant frontière donc c'est sur lui que l'on déclare les préocuppations de sécurité, de démarcation transactionnelle... .
 
+Un Application service permet de modifier un seul Agrégat, mais d'agréger les informations de plusieurs Agrégats (au sein d'un DTO).
 
 ### Domain service
 
@@ -45,6 +46,18 @@ L'interface est dans la couche domaine mais l'implémentation est contenu dans l
 N'initie pas la transaction mais participe à la transaction courante.
 
 Attention, Add et Remove sont idempotents : faire 2 add revient à en faire un seul. (TODO A CREUSER)
+
+En lecture, le Repository permet de charger l'Aggregate Root, les autres entités de l'Agrégat ne peuvent être atteintes qu'en suivant les liens d'association.
+En écriture, le Repository encapsule la création, la suppression et la modification d'un Agrégat sans exposer les Entités non-racine.
+
+
+### Factory
+
+Si la création d'un Agrégat est complexe, encapsuler cette création dans une Factory.
+Le contrat de la Factory est de produire un Agrégat complètement construit, satisfaisant tous ses invariants.
+
+
+
 
 Nommages possibles :
 - BookRepository
@@ -139,6 +152,15 @@ La visibilité publique par défaut peut entrainer un design complexe et qui ne 
 Pour encourager cela, préferer la visibilité package et ne passer en publique que les classes qui doivent être accessible de l'extérieur (aggregate root et value objects par exemple).
 
 Dans maven, le découpage src/main/java et src/test/java permet de séparer les classes de test du code de production tout en laissant la possibilité de les mettre dans le même package que les classes à tester.
+
+
+### Aggregat et Repository
+
+En lecture, le Repository permet de charger l'Aggregate Root, les autres entités de l'Agrégat ne peuvent être atteintes qu'en suivant les liens d'association.
+
+En écriture, le Repository encapsule la création, la suppression et la modification d'un Agrégat sans exposer les Entités non-racine.
+
+
 
 
 
