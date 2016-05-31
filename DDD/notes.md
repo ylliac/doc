@@ -160,6 +160,11 @@ Pour encourager cela, préferer la visibilité package et ne passer en publique 
 
 Dans maven, le découpage src/main/java et src/test/java permet de séparer les classes de test du code de production tout en laissant la possibilité de les mettre dans le même package que les classes à tester.
 
+### Résumé
+
+![aggregat_summary](aggregat_summary.PNG)
+
+
 
 
 
