@@ -128,8 +128,15 @@ Une transaction ne doit modifier qu'un aggregat ! (risque de deadlock)
 
 ![aggregat_deadlock](aggregat_deadlock.PNG)
 
+### Granularité
+
 Remplacer une relation directe entre deux aggregat par un value object ID partagé permet de limiter le risque de modification dde deux agrégats dans une même transaction (c'est le principe d'une Foreign Key dans une BDD).
 Les relations directes entre agrégats ne sont pas interdites à condition de ne jamais modifier les deux Agrégats dans une même transaction.
+
+![aggregat_before](aggregat_before.PNG)
+
+![aggregat_deadlock](aggregat_after.PNG)
+
 
 ### Aggregate root
 
