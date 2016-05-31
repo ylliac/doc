@@ -154,11 +154,6 @@ Pour encourager cela, préferer la visibilité package et ne passer en publique 
 Dans maven, le découpage src/main/java et src/test/java permet de séparer les classes de test du code de production tout en laissant la possibilité de les mettre dans le même package que les classes à tester.
 
 
-### Aggregat et Repository
-
-En lecture, le Repository permet de charger l'Aggregate Root, les autres entités de l'Agrégat ne peuvent être atteintes qu'en suivant les liens d'association.
-
-En écriture, le Repository encapsule la création, la suppression et la modification d'un Agrégat sans exposer les Entités non-racine.
 
 
 
