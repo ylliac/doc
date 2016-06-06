@@ -165,6 +165,40 @@ Dans maven, le découpage src/main/java et src/test/java permet de séparer les 
 ![aggregat_summary](aggregat_summary.PNG)
 
 
+## Domain events
+
+Représente un évènement qui intéresse les experts métier (les évènements techniques ne sont pas des domain events).
+
+Il est **instantané (sans durée) et atomique (insécable)**.
+Il se situe dans le passé : **il ne peut pas échouer**. 
+On utilise le participe passé pour le nommer.
+
+Exemples d'applications :
+- faire un traitement métier en réponse à un événement métier (quand ... se produit, faire ...)
+- enregistrer une action métier réalisée par un opérateur dans un audit trail
+- Tracking de l'utilisateur : debug, amélioration du logiciel, amélioration du processus métier...
+- Event sourcing
+- Intéraction avec des systèmes externes (induit *l'eventual consistency*, une fenêtre temporelle d'incohérence)
+ 
+Les domaines events peuvent servir de base à **l'EVENT STORMING**.
+
+### Contenu
+
+![domain_events](domain_events.PNG)
+
+### Guidelines
+
+- L'événement ne doit être produit qu'une fois l'action terminée
+- L'évènement n'est pas obligatoirement produit par l'aggregate root, il est produit par l'entité réalisant l'action causant l'événement
+- Les domain events sont généralement consommés par un Application Service car c'est souvent une préoccupation de coordination et non de métier
+- Fire and forget : une erreur dans le consommateur de l'event n'est pas transmise au producteur
+- L'événement est consommé dans une transaction différente de celle qui l'a produit
+
+### Exemple  
+
+![domain_event_example](domain_event_example.PNG)
+
+L'application service *EvenementsReservation* écoute l'infrastructure service *Notifications*.
 
 
 
