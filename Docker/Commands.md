@@ -1,4 +1,6 @@
 
+Doc : https://docs.docker.com/engine/reference/commandline/cli/
+
 
 # Commandes docker
 
@@ -35,6 +37,42 @@ ou
 > docker inspect id_du_container cmd
 
 Donne plein d'infos sur le container.
+
+## Supprimer un container
+
+> docker rm id_du_container
+
+En précisant l'option `-v`, supprime les volumes associés.
+
+
+# Commandes docker-compose
+
+## Démarrer / Mettre à jour tous les containers
+
+> docker-compose up -d
+
+## Lister l'état des containers
+
+> docker-compose ps
+
+## Stopper tous les containers
+
+> docker-compose stop
+
+## Redemmarer tous les containers
+
+> docker-compose restart
+
+## Supprimer les containers stoppés
+
+> docker-compose rm
+
+En précisant l'option `-v`, supprime les volumes associés.
+
+## Afficher les logs
+
+> docker-compose logs
+
 
 # Bugs
 
