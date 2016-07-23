@@ -26,6 +26,15 @@ ou
 
 > docker exec -it id_du_container cmd
 
+## Lister l'état de toutes les images (y compris les data containers)
+
+> docker ps -a
+
+## Inpecter un container
+
+> docker inspect id_du_container cmd
+
+Donne plein d'infos sur le container.
 
 # Bugs
 
