@@ -14,7 +14,17 @@ puis se connecter sur http://localhost
 
 `docker kill id_du_container` pour killer un container.
 
+## Lister les images installées en local
 
+> docker images
+
+## Executer une invite de commande sur un container
+
+> docker exec -it id_du_container bash
+
+ou
+
+> docker exec -it id_du_container cmd
 
 
 # Bugs
