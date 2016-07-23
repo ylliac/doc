@@ -29,6 +29,11 @@ ou
 
 # Bugs
 
+## Les volumes de marchent pas sous windows
+
+Aller dans les setting docker et activer le shared drive sur C: 
+
+
 ## driver failed programming external connectivity on endpoint webserver
 
 ```
