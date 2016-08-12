@@ -179,3 +179,8 @@ let expect = require('chai');
 expect(true).to.equal(true);
 ```
 
+# Bugs
+
+ERROR: ENOENT: no such file or directory, lstat 'something/step-definitions/**/*.js'
+
+Cucumber ne semble pas accepter les étoiles. Enlever **/*.js à la fin.
