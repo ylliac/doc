@@ -1179,7 +1179,13 @@ Fonctionnement interne :
 - `logs` : Stocke l'historique des références, accessible via `git reflog`
 
 
+### J'ai perdu mon commit !
 
+Cela dépend des paramètres de nettoyage automatique de Git mais si cela fait moins de 2 semaines que vous l'avez perdu, il est probablement encore la.
+
+Première piste, le `reflog`. Tapez la commande `git reflog` qui va afficher le log de vos actions passées et tentez de voir si vous retrouvez votre commit.
+
+Deuxième piste, tapez la commande `git fsck --lost-found` qui vous listera tous les commits *dangling*, c'est à dire les commits qui ne sont plus référencés par une branche ou un tag.
 
 
 ### Si Git stocke tout le contenu du fichier à chaque modification, pourquoi la taille de la base n'explose pas ?
